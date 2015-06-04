@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Simple Slide Show Demo</title>
+	<link href='../slideshow.css' rel='stylesheet'>
+	<script src="../jquery-1.11.2.min.js"></script>
+	<script src="../slideshow.js"></script>
+	<script>
+		$(document).ready(function ()
+		{
+			$(".default-slideshow").slideshow();
+			$(".reversed-slideshow").slideshow({PlayOnOut:true});
+			$(".clicky-slideshow").slideshow({PlayOnClick:true});
+			$(".clicky-other-slideshow").slideshow({PlayOnClick:true,NextSlideDelegate:$("#click-delegate"),OnSlidingDone:function (current){alert("Sliding Done");}});
+		});
+	</script>
+<style>
+.demo-container{
+max-width:500px;
+margin:0 auto;
+width:100%;
+}
+.slideshow-container{
+	width:100%;
+	min-height:200px;
+	background:#ccc;
+}
+.slideshow-single-slide{
+	width:100%;
+	height:100%;
+	text-align:center;
+}
+.slideshow-single-slide>img{
+	height:100%;
+	display:block;
+	margin:0 auto;
+}
+</style>
+</head>
+<body>
+	<div class="demo-container">
+		<div>
+			<h1>Default Slideshow</h1>
+			<div class="slideshow-container default-slideshow">
+				<div class="slideshow-single-slide">
+					<p>Here you can put text,<a href="">links</a> or anything you want</p>
+				</div>
+				<div class="slideshow-single-slide">
+					<p>another slide</p>
+				</div>
+				<div class="slideshow-single-slide">
+					<img src="imgs/1.jpg"/>
+				</div>
+			</div>
+		</div>
+		<div>
+			<h1>Play on Mouse Out stop on hover</h1
+			<h5>will be activated after the first mouse hover.</h5>
+			<div class="slideshow-container reversed-slideshow">
+				<div class="slideshow-single-slide">
+					<p>Here you can put text,<a href="">links</a> or anything you want</p>
+				</div>
+				<div class="slideshow-single-slide">
+					<p>another slide</p>
+				</div>
+				<div class="slideshow-single-slide">
+					<img src="imgs/1.jpg"/>
+				</div>
+			</div>
+		</div>
+		<div>
+			<h1>Click Triggered Slideshow</h1>
+			<div class="slideshow-container clicky-slideshow">
+				<div class="slideshow-single-slide">
+					<p>Here you can put text,<a href="">links</a> or anything you want</p>
+				</div>
+				<div class="slideshow-single-slide">
+					<p>another slide</p>
+				</div>
+				<div class="slideshow-single-slide">
+					<img src="imgs/1.jpg"/>
+				</div>
+			</div>
+		</div>
+		<div>
+			<h1>Click Triggered Slideshow by another Element</h1>
+			<a id="click-delegate" href="javascript:void(0)">Click me to show the next slide</a>
+			<div class="slideshow-container clicky-other-slideshow">
+				<div class="slideshow-single-slide">
+					<p>Here you can put text,<a href="">links</a> or anything you want</p>
+				</div>
+				<div class="slideshow-single-slide">
+					<p>another slide</p>
+				</div>
+				<div class="slideshow-single-slide">
+					<img src="imgs/1.jpg"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
