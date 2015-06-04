@@ -1,9 +1,9 @@
 # Simple-SlideShow
-Installation : 
-1-load slideshow.css file.
-2-load jquery library.
-3-load slideshow.js file.
-Options :
+##Installation : 
+1.load slideshow.css file.
+2.load jquery library.
+3.load slideshow.js file.
+##Options :
 var defaults={
 			PlayOnHover:true,// should the plugin work on hover event?
 			PlayOnOut:false, // should the plugin work on mouse out event? contrary with the PlayOnHover option.
