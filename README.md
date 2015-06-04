@@ -1,5 +1,5 @@
 # Simple-SlideShow
-Demo available on [Demo Page](http://3b00d.github.com/Simple-SlideShow/demo)
+Demo available on [Demo Page](http://3b00d.github.io/Simple-SlideShow/demo/)
 ##Installation : 
 1. load slideshow.css file.
 1. load jquery library.
