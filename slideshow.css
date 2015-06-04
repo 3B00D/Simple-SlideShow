@@ -1,0 +1,12 @@
+.slideshow-container{
+	/* The position relative is important for this plugin to work so that the all the slides will be inside the container.*/
+	position:relative;
+}
+.slideshow-single-slide{
+	position:absolute;
+	top:0;
+	bottom:0;
+}
+.slideshow-current-slide{
+z-index:2;
+}
